@@ -1,0 +1,5 @@
+SELECT p.ProductName as "제품명", p.Price as "가격", od.Quantity as "주문 갯수", c.CustomerName as "고객명"
+FROM ( (OrderDetails od
+INNER JOIN Products p ON od.ProductID = p.ProductID)
+INNER JOIN Orders o ON od.OrderID = o.OrderID)
+INNER JOIN Customers c ON o.CustomerID = c.CustomerID;

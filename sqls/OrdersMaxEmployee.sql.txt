@@ -1,0 +1,4 @@
+SELECT TOP 1 EmployeeID, COUNT(*) AS order_count
+FROM Orders
+group by employeeId
+order by COUNT(*) DESC;

@@ -1,0 +1,4 @@
+SELECT CategoryID, COUNT(*) as "개수"
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(*) >= 10;
