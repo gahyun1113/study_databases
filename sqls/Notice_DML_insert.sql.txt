@@ -1,0 +1,11 @@
+insert into NOTICE values ('NOT01', '서비스 점검 안내');
+insert into NOTICE values ('NOT02', '이벤트 안내');
+
+insert INTO WRITER VALUES ('WR_01', 'NOT01', '관리자');
+insert INTO WRITER VALUES ('WR_02', 'NOT02', '마케팅팀');
+
+INSERT INTO VISITORS VALUES ('VL_01', 'NOT01', '홍길동');
+INSERT INTO VISITORS VALUES ('VL_02', 'NOT01', '김영희');
+INSERT INTO VISITORS VALUES ('VL_03', 'NOT02', '백지영');
+INSERT INTO VISITORS VALUES ('VL_04', 'NOT02', '최민호');
+INSERT INTO VISITORS VALUES ('VL_05', 'NOT02', '송지현');
