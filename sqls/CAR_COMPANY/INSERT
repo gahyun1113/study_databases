@@ -1,0 +1,56 @@
+INSERT INTO `YEAR` (`YEAR_PK`, `연식`) VALUES
+('YEAR_01', 2017),
+('YEAR_02', 2018),
+('YEAR_03', 2019),
+('YEAR_04', 2020),
+('YEAR_05', 2021);
+
+INSERT INTO `COMPANY` (`COMPANY_PK`, `회사이름`) VALUES
+('COM_01', '현대'),
+('COM_02', '기아'),
+('COM_03', '쉐보레'),
+('COM_04', 'BMW'),
+('COM_05', '벤츠');
+
+INSERT INTO `OPTION` (`OPTION_PK`, `옵션`) VALUES
+('OP_01', '네비게이션'),
+('OP_02', '후방카메라'),
+('OP_03', '가죽시트'),
+('OP_04', '스마트키'),
+('OP_05', '크루즈컨트롤'),
+('OP_06', '블루투스'),
+('OP_07', '후방감지센서'),
+('OP_08', '헤드업디스플레이'),
+('OP_09', '전자식 메모리 시트'),
+('OP_10', '어댑티브 크루즈컨트롤');
+
+INSERT INTO `CAR` (`CAR_PK`, `자동차이름`) VALUES
+('CAR_01', '소나타'),
+('CAR_02', '쏘렌토'),
+('CAR_03', '카마로'),
+('CAR_04', '3시리즈'),
+('CAR_05', 'E클래스');
+
+INSERT INTO `CAR_INFO` (`CAR_INFO_PK`, `CAR_PK`, `COMPANY_PK`, `YEAR_PK`) VALUES
+('INFO_01', 'CAR_01', 'COM_01', 'YEAR_04'),
+('INFO_02', 'CAR_02', 'COM_02', 'YEAR_02'),
+('INFO_03', 'CAR_03', 'COM_03', 'YEAR_03'),
+('INFO_04', 'CAR_04', 'COM_04', 'YEAR_01'),
+('INFO_05', 'CAR_05', 'COM_05', 'YEAR_05'),
+('INFO_06', 'CAR_01', 'COM_01', 'YEAR_05'),
+('INFO_07', 'CAR_01', 'COM_01', 'YEAR_02');
+
+INSERT INTO `CAR_INFO_OPTION` (`CAR_INFO_PK`, `OPTION_PK`) VALUES
+('INFO_01', 'OP_01'),
+('INFO_01', 'OP_02'),
+('INFO_02', 'OP_03'),
+('INFO_02', 'OP_04'),
+('INFO_03', 'OP_05'),
+('INFO_03', 'OP_06'),
+('INFO_04', 'OP_07'),
+('INFO_04', 'OP_08'),
+('INFO_05', 'OP_09'),
+('INFO_05', 'OP_10'),
+('INFO_06', 'OP_06'),
+('INFO_07', 'OP_07'),
+('INFO_07', 'OP_02');
