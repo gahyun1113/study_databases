@@ -1,0 +1,16 @@
+SELECT
+	u.name AS 이름,
+    COUNT(hb.hb_pk) AS 취미개수,
+    u.age AS 나이,
+    u.gender AS 성별,
+    a.address AS 배송_주소
+FROM
+    user u
+JOIN
+    hb_info hb ON u.hobby = hb.hb_info_no
+JOIN
+    ad_info ad ON u.address = ad.ad_info_no
+JOIN
+    address a ON ad.ad_pk = a.ad_pk
+GROUP BY
+	u.name, u.age, u.gender, a.address;
