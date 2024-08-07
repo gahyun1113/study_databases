@@ -1,0 +1,5 @@
+SELECT *
+FROM Employees E
+LEFT JOIN Orders O
+ON E.EmployeeID = O.EmployeeID
+WHERE O.OrderId IS NULL;
