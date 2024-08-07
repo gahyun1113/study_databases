@@ -1,0 +1,46 @@
+INSERT INTO address VALUES
+('ad_01', '서울특별시 강남구'),
+('ad_02', '경기도 수원시'),
+('ad_03', '인천광역시 부평구'),
+('ad_04', '대전광역시 서구'),
+('ad_05', '경상북도 포항시 북구');
+
+INSERT INTO hobby VALUES
+('hb_01', '등산'),
+('hb_02', '요리'),
+('hb_03', '음악감상'),
+('hb_04', '수영'),
+('hb_05', '영화감상'),
+('hb_06', '자전거'),
+('hb_07', '요가'),
+('hb_08', '그림그리기'),
+('hb_09', '독서'),
+('hb_10', '공원산책');
+
+INSERT INTO ad_info VALUES
+('ad_info_01', 'ad_01'),
+('ad_info_01', 'ad_02'),
+('ad_info_02', 'ad_02'),
+('ad_info_03', 'ad_03'),
+('ad_info_04', 'ad_04'),
+('ad_info_05', 'ad_05'),
+('ad_info_05', 'ad_04');
+
+INSERT INTO hb_info VALUES
+('hb_info_01', 'hb_01'),
+('hb_info_01', 'hb_02'),
+('hb_info_02', 'hb_03'),
+('hb_info_02', 'hb_04'),
+('hb_info_03', 'hb_05'),
+('hb_info_03', 'hb_06'),
+('hb_info_04', 'hb_07'),
+('hb_info_04', 'hb_08'),
+('hb_info_05', 'hb_09'),
+('hb_info_05', 'hb_10');
+
+INSERT INTO user VALUES
+('user_01', '홍길동', 'hb_info_01', '30', '남', 'ad_info_01', '010-1234-5678', 'hong@example.com'),
+('user_02', '김영희', 'hb_info_02', '25', '여', 'ad_info_02', '010-9876-5432', 'kim@example.com'),
+('user_03', '이철수', 'hb_info_03', '35', '남', 'ad_info_03', '010-2468-1357', 'lee@example.com'),
+('user_04', '박민준', 'hb_info_04', '28', '남', 'ad_info_04', '010-8642-9137', 'park@example.com'),
+('user_05', '임지영', 'hb_info_05', '32', '여', 'ad_info_05', '010-5793-6241', 'lim@example.com');

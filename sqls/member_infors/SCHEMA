@@ -1,0 +1,36 @@
+CREATE TABLE address (
+    ad_pk VARCHAR(20) PRIMARY KEY,
+    address VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE hobby (
+    hb_pk VARCHAR(20) PRIMARY KEY,
+    hobby VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE ad_info (
+    ad_info_no VARCHAR(20),
+    ad_pk VARCHAR(20),
+	PRIMARY KEY (ad_info_no, ad_pk),
+    FOREIGN KEY (ad_pk) REFERENCES address(ad_pk)
+);
+
+CREATE TABLE hb_info (
+    hb_info_no VARCHAR(15),
+    hb_pk VARCHAR(10),
+    PRIMARY KEY (hb_info_no, hb_pk),
+    FOREIGN KEY (hb_pk) REFERENCES hobby(hb_pk)
+);
+
+CREATE TABLE user (
+    user_id VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    hobby VARCHAR(20),
+    age VARCHAR(20) NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    address VARCHAR(20),
+    tel VARCHAR(20) NOT NULL,
+    email VARCHAR(20) NOT NULL,
+    FOREIGN KEY (hobby) REFERENCES hb_info(hb_info_no),
+    FOREIGN KEY (address) REFERENCES ad_info(ad_info_no)
+);
